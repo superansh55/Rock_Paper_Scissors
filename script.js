@@ -1,11 +1,11 @@
 function getComputerChoice() {
-  const choice = ["rock" , "paper", "scissors"]
-  let value = Math.floor(Math.random() * 3)
-  return choice[value]
+  const choice = ["rock" , "paper", "scissors"];
+  let value = Math.floor(Math.random() * 3);
+  return choice[value];
 }
 
 function getHumanChoice() {
-  return prompt("Enter your Choice: rock, paper, scissors")
+  return prompt("Enter your Choice: rock, paper, scissors");
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -14,39 +14,39 @@ function playRound(humanChoice, computerChoice) {
   }
   else if (humanChoice === "rock") {
       if (computerChoice === "paper") {
-          console.log(`You lose! Computer choose ${computerChoice}`)
-          return computerScore++
+          console.log(`You lose! Computer choose ${computerChoice}`);
+          return computerScore++;
       }
       else if (computerChoice === "scissors") {
-          console.log(`You won! Computer choose ${computerChoice}`)
-          return humanScore++
+          console.log(`You won! Computer choose ${computerChoice}`);
+          return humanScore++;
       }
   }
   else if (humanChoice === "paper") {
       if (computerChoice === "scissors") {
-          console.log(`You lose! Computer choose ${computerChoice}`)
-          return computerScore++
+          console.log(`You lose! Computer choose ${computerChoice}`);
+          return computerScore++;
       }
       else if (computerChoice === "rock") {
-          console.log(`You won! Computer choose ${computerChoice}`)
-          return humanScore++
+          console.log(`You won! Computer choose ${computerChoice}`);
+          return humanScore++;
       }
   }
   else if (humanChoice === "scissors") {
       if (computerChoice === "rock") {
-          console.log(`You lose! Computer choose ${computerChoice}`)
-          return computerScore++
+          console.log(`You lose! Computer choose ${computerChoice}`);
+          return computerScore++;
       }
       else if (computerChoice === "paper") {
-          console.log(`You won! Computer choose ${computerChoice}`)
-          return humanScore++
+          console.log(`You won! Computer choose ${computerChoice}`);
+          return humanScore++;
       }
   }
 }
 
 
-let humanScore = 0
-let computerScore = 0
+let humanScore = 0;
+let computerScore = 0;
 
 function startGame() {
   for (let i = 0; i < 5; i++) {
@@ -60,13 +60,13 @@ function startGame() {
 startGame(); 
 
 if (humanScore > computerScore) {
-  console.log("You won!")
+  console.log("You won!");
 }
 else if (computerScore > humanScore) {
-  console.log("Computer won")
+  console.log("Computer won");
 }
 else {
-  console.log("Tie")
+  console.log("Tie");
 }
 
-alert("Open console to see the Winner")
+alert("Open console to see the Winner");
